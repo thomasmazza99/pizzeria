@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8"
     <title>Pizzeria Rosso Blu - Insalate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,7 +22,7 @@ $homedir = substr($_SERVER['SCRIPT_FILENAME'],0,-strlen($_SERVER['SCRIPT_NAME'])
 require_once  $homedir.'/pizzeria/db.php';
 $db = new DB();
 
-$pizze = $db->getRows('insalate',array('order_by'=>'prezzo'));
+$insalate = $db->getRows('Insalate',array('order_by'=>'prezzo'));
 
 //get status message from session
 if(!empty($sessData['status']['msg'])){
@@ -31,16 +31,7 @@ if(!empty($sessData['status']['msg'])){
     unset($_SESSION['sessData']['status']);
 }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Pizzeria Rosso Blu - insalate</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="/pizzeria/assets/css/bootstrap.min.css" media="screen">
-    <link rel="stylesheet" href="/pizzeria/assets/css/style.css">
-  </head>
+
   <?php 
   $homedir = substr($_SERVER['SCRIPT_FILENAME'],0,-strlen($_SERVER['SCRIPT_NAME']) );
   include $homedir.'/pizzeria/menu.php';
@@ -68,14 +59,14 @@ if(!empty($sessData['status']['msg'])){
                 </tr>
             </thead>
             <tbody id="userData">
-                <?php if(!empty($insalate)): $count = 0; foreach($panino as $insalate): $count++; ?>
+                <?php if(!empty($insalate)): $count = 0; foreach($insalate as $insalata): $count++; ?>
                 <tr>
-                    <td><?php echo $panino['nome_insalate']; ?></td>
-                    <td><?php echo $panino['ingredienti']; ?></td>
-                    <td><?php echo $panino['prezzo']; ?></td>
+                    <td><?php echo $insalata['nome_insalate']; ?></td>
+                    <td><?php echo $insalata['ingredienti']; ?></td>
+                    <td><?php echo $insalata['prezzo']; ?></td>
                     <td>
-                        <a href="addEdit.php?id=<?php echo $pizza['id']; ?>"><i class="glyphicon glyphicon-edit"></i></a>
-                        <a href="userAction.php?action_type=delete&id=<?php echo $panino['id']; ?>" class="glyphicon glyphicon-trash" onclick="return confirm('Sei sicuro di eliminare?')"></a>
+                        <a href="addEdit.php?id=<?php echo $insalata['id']; ?>"><i class="glyphicon glyphicon-edit"></i></a>
+                        <a href="action.php?action_type=delete&id=<?php echo $insalata['id']; ?>" class="glyphicon glyphicon-trash" onclick="return confirm('Sei sicuro di eliminare?')"></a>
                     </td>
                 </tr>
                 <?php endforeach; else: ?>

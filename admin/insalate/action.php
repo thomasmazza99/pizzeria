@@ -5,7 +5,7 @@ $homedir = substr($_SERVER['SCRIPT_FILENAME'],0,-strlen($_SERVER['SCRIPT_NAME'])
 require_once  $homedir.'/pizzeria/db.php';
     $db = new DB();
 
-$tblName = 'insalate';
+$tblName = 'Insalate';
 
 //set default redirect url
 $redirectURL = 'index.php';

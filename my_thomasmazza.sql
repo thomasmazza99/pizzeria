@@ -22,7 +22,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `Bibite`
+-- Struttura della tabella `bibite`
 --
 
 CREATE TABLE IF NOT EXISTS `Bibite` (
@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `Bibite` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
--- Dump dei dati per la tabella `Bibite`
+-- Dump dei dati per la tabella `bibite`
 --
 
 INSERT INTO `Bibite` (`id`, `nome_bibite`, `dimensione`, `Prezzo`) VALUES
@@ -55,7 +55,7 @@ CREATE TABLE IF NOT EXISTS `bibite_ordini` (
 -- --------------------------------------------------------
 
 --
--- Struttura della tabella `Insalate`
+-- Struttura della tabella `insalate`
 --
 
 CREATE TABLE IF NOT EXISTS `Insalate` (
@@ -67,7 +67,7 @@ CREATE TABLE IF NOT EXISTS `Insalate` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
--- Dump dei dati per la tabella `Insalate`
+-- Dump dei dati per la tabella `insalate`
 --
 
 INSERT INTO `Insalate` (`id`, `nome_insalate`, `ingredienti`, `prezzo`) VALUES

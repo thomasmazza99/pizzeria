@@ -56,7 +56,7 @@ if(!empty($sessData['status']['msg'])){
                 <form method="post" action="action.php" class="form">
                     <div class="form-group">
                         <label for="nome_panino">Nome</label>
-                        <input type="text" class="form-control" name="nome_panino" id="nome_panino" value="<?php echo !empty($row['nome_pizza'])?$row['nome_pizza']:''; ?>">
+                        <input type="text" class="form-control" name="nome_panino" id="nome_panino" value="<?php echo !empty($row['nome_panino'])?$row['nome_panino']:''; ?>">
                     </div>
                     <div class="form-group">
                         <label for="ingredienti">Ingredienti</label>
@@ -67,7 +67,7 @@ if(!empty($sessData['status']['msg'])){
                         <input type="text" class="form-control" name="prezzo" id="prezzo" value="<?php echo !empty($row['prezzo'])?$row['prezzo']:''; ?>">
                     </div>
                     <input type="hidden" name="id" value="<?php echo !empty($row['id'])?$row['id']:''; ?>">
-                    <input type="submit" name="formSubmit" class="btn btn-success" value="Salva"/>
+                    <input type="submit" name="formSubmit" class="btn btn-success" value="<?php echo $actionLabel; ?>"/>
                 </form>
             </div>
         </div>

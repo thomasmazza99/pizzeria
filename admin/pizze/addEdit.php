@@ -67,7 +67,7 @@ if(!empty($sessData['status']['msg'])){
                         <input type="text" class="form-control" name="prezzo" id="prezzo" value="<?php echo !empty($row['prezzo'])?$row['prezzo']:''; ?>">
                     </div>
                     <input type="hidden" name="id" value="<?php echo !empty($row['id'])?$row['id']:''; ?>">
-                    <input type="submit" name="formSubmit" class="btn btn-success" value="Salva"/>
+                    <input type="submit" name="formSubmit" class="btn btn-success" value="<?php echo $actionLabel; ?>"/>
                 </form>
             </div>
         </div>

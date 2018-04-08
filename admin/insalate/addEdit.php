@@ -3,7 +3,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Pizzeria Rosso Blu - insalate</title>
+    <title>Pizzeria Rosso Blu - Insalate</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="/pizzeria/assets/css/bootstrap.min.css" media="screen">
@@ -30,7 +30,7 @@ if(!empty($_GET['id'])){
         'id' => $_GET['id'],
     );
     $conditions['return_type'] = 'single';
-    $row = $db->getRows('insalate', $conditions);
+    $row = $db->getRows('Insalate', $conditions);
 }
 
 $actionLabel = !empty($_GET['id'])?'Modifica':'Aggiungi';
@@ -51,12 +51,12 @@ if(!empty($sessData['status']['msg'])){
     <?php } ?>
     <div class="row">
         <div class="panel panel-default">
-            <div class="panel-heading"><?php echo $actionLabel; ?> insalate <a href="index.php" class="glyphicon glyphicon-arrow-left"></a></div>
+            <div class="panel-heading"><?php echo $actionLabel; ?> Insalate <a href="index.php" class="glyphicon glyphicon-arrow-left"></a></div>
             <div class="panel-body">
                 <form method="post" action="action.php" class="form">
                     <div class="form-group">
                         <label for="nome_insalate">Nome</label>
-                        <input type="text" class="form-control" name="nome_insalate" id="nome_insalate" value="<?php echo !empty($row['nome_pizza'])?$row['nome_pizza']:''; ?>">
+                        <input type="text" class="form-control" name="nome_insalate" id="nome_insalate" value="<?php echo !empty($row['nome_insalate'])?$row['nome_insalate']:''; ?>">
                     </div>
                     <div class="form-group">
                         <label for="ingredienti">Ingredienti</label>
@@ -67,7 +67,7 @@ if(!empty($sessData['status']['msg'])){
                         <input type="text" class="form-control" name="prezzo" id="prezzo" value="<?php echo !empty($row['prezzo'])?$row['prezzo']:''; ?>">
                     </div>
                     <input type="hidden" name="id" value="<?php echo !empty($row['id'])?$row['id']:''; ?>">
-                    <input type="submit" name="formSubmit" class="btn btn-success" value="Salva"/>
+                    <input type="submit" name="formSubmit" class="btn btn-success" value="<?php echo $actionLabel; ?>"/>
                 </form>
             </div>
         </div>
