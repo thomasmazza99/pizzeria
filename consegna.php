@@ -8,30 +8,14 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="screen">
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
-  <?php include 'menu.php';?>
+  <?php include 'prodotti.php';?>
   <body>
   	
     <div class="container" id='page-content'>
-    <div class="row">
-    
-        <div class="col-lg-6">
-        <div class="jumbotron">
-          <h1>Ritiro In Pizzeria</h1>
-          <p>...</p>
-          <p><a class="btn btn-info btn-lg" href="ritiro-pizzeria.php" role="button">Vedi Menù</a></p>
-        </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="jumbotron">
-          <h1>Consegna A Domicilio</h1>
-          <p>...</p>
-          <p><a class="btn btn-info btn-lg" href="consegna.php" role="button">Vedi Menù</a></p>
-        </div>
-	</div>
+
     </div>
    
-	<?php include 'footer.php';?>
-    </div>
+	  <?php include 'footer.php';?>
 
 
     <script src="assets/scripts/jquery.min.js"></script>

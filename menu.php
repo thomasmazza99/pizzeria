@@ -14,6 +14,9 @@
         <li>
           <a href="/pizzeria/chisiamo.php">Chi Siamo</a>
         </li>
+        <li>
+          <a href="/pizzeria/login.php">Login</a>
+        </li>
       </ul>
     </div>
   </div>

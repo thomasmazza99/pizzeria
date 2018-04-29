@@ -18,9 +18,9 @@
         
         <div class="list-group">
           <a href="/pizzeria/prodotti-pizze.php" class="list-group-item">Pizze</a>
-          <a href="/pizzeria/admin/panini" class="list-group-item">Panini</a>
-          <a href="/pizzeria/admin/insalate" class="list-group-item">Insalate</a>
-          <a href="/pizzeria/admin/bibite" class="list-group-item">Bibite</a>
+          <a href="/pizzeria/prodotti-panini.php" class="list-group-item">Panini</a>
+          <a href="/pizzeria/prodotti-insalate.php" class="list-group-item">Insalate</a>
+          <a href="/pizzeria/prodotti-bibite.php" class="list-group-item">Bibite</a>
         </div>
       </div>
     </div>
