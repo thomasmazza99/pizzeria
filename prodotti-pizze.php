@@ -43,7 +43,7 @@ $pizze = $db->getRows('Pizze',array('order_by'=>'prezzo'));
                 <div class="caption">
                     <h3><?php echo $pizza['nome_pizza']; ?></h3>
                     <p><?php echo $pizza['ingredienti']; ?></p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+                    <p><a href="carrello.php?id_pizza=<?php echo $pizza['id']; ?>" class="btn btn-primary" role="button">Aggiungi al Carrello</a></p>
                 </div>
         </div>
     </div>
