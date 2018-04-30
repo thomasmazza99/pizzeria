@@ -22,15 +22,12 @@ class Carrello{
         array_push($this->items,$item);
     }
     public function delete($product_id, $tipo){
-        $array=$this->items;
-        foreach($array as $elementKey => $element) {
-            foreach($element as $valueKey => $value) {
-                if($valueKey == 'product_id' && $value == $product_id){
-                    //delete this particular object from the $array
-                    array_splice($array,$elementKey,1);
-                } 
+        foreach($this->items as $index => $element) {
+            $item=$this->items[$index];
+            if($item->product_id==$product_id && $item->tipo==$tipo)
+            {
+                 array_splice($this->items,$index,1);
             }
         }
-        $this->items=$array;
     }
 }

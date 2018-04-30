@@ -25,8 +25,8 @@ session_start();
 $db = new DB();
 $cart = !empty($_SESSION['cart'])?$_SESSION['cart']:new Carrello($db);
 
-if(isset($_GET['id_product']) && isset($_GET['delete'])){
-    $cart->delete($_GET['id_product'],"pizze");
+if(isset($_GET['id_product']) && isset($_GET['delete']) && isset($_GET['tipo'])){
+    $cart->delete($_GET['id_product'],$_GET['tipo']);
     $_SESSION['cart'] = $cart;
 }
     if(isset($_GET['id_pizza'])){
@@ -66,7 +66,7 @@ if(isset($_GET['id_product']) && isset($_GET['delete'])){
                     <td><?php echo $item->quantity; ?></td>
                     <td><?php echo $item->tipo; ?></td>
                     <td>
-                        <a href="carrello.php?delete=true&id_product=<?php echo $item->product_id; ?>"><i class="glyphicon glyphicon-edit"></i></a>
+                        <a href="carrello.php?delete=true&id_product=<?php echo $item->product_id; ?>&tipo=<?php echo $item->tipo; ?>"><i class="glyphicon glyphicon-edit"></i></a>
                         
                     </td>
                 </tr>
